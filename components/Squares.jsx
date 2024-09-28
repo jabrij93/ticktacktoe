@@ -2,7 +2,7 @@ let square = [];
 
 const Squares = ({ data }) => {
 
-    for (let i=0; i<5; i++) {
+    for (let i=0; i<3; i++) {
         square.push(
         <div 
             key={i}
@@ -21,7 +21,7 @@ const Squares = ({ data }) => {
         <div style=
             {{
                 display:'grid',
-                gridTemplateColumns: 'repeat(3, 70px)'
+                gridTemplateColumns: 'repeat(3, 70px)',
             }}> {square} 
         </div>
     )
