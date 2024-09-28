@@ -5,12 +5,13 @@ const Squares = ({ data }) => {
     for (let i=0; i<5; i++) {
         square.push(
         <div 
+            key={i}
             style={{ 
-            height: '70px',
-            width: '70px',
-            border: 'solid black 2px',
-            color: 'grey',
-            display: 'inline-block',
+                height: '70px',
+                width: '70px',
+                border: 'solid black 2px',
+                color: 'grey',
+                display: 'inline-block',
             }}
         /> 
         )
@@ -18,10 +19,11 @@ const Squares = ({ data }) => {
 
     return (
         <div style=
-        {{
-            display:'grid',
-            gridTemplateColumns: 'repeat(3, 70px)'
-        }}> {square} </div>
+            {{
+                display:'grid',
+                gridTemplateColumns: 'repeat(3, 70px)'
+            }}> {square} 
+        </div>
     )
 }
 
