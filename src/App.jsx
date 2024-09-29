@@ -22,11 +22,11 @@ function Squares() {
   return (
     <div
       style={{
-        height: '50px',
-        width: '50px',
+        height: '160px',
+        width: '160px',
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 50px)',
-        justifyContent: 'start'
+        justifyContent: 'start',
       }}
     > {squares}</div>
   )
@@ -37,14 +37,15 @@ function App() {
   console.log("INSPECT button", count)
 
   return (
-    <div>
-      <Squares />  
+    <div style={{display: 'flex', flexDirection: 'column', flex: '1', alignItems: 'center', gap: '20px' }}>
+      <div>
+      <Squares /> 
+      </div> 
 
       <div>
         <p> Hello, world !</p>
         
         <button onClick={()=>setCount(count + 1)}>CLICK ME</button>
-
         
         <p> COUNT : {count} </p>
       </div>
