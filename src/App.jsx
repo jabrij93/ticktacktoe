@@ -8,11 +8,13 @@ function Squares() {
 
   for (let i=0; i<9; i++) {
     squares.push(
-      <div style={{
-        height:'50px',
-        width:'50px',
-        style:'inline-block',
-        border:'solid black 2px',
+      <div 
+        key={i}
+        style={{
+          height:'50px',
+          width:'50px',
+          style:'inline-block',
+          border:'solid black 2px',
       }}/>
     )
   }
@@ -23,7 +25,8 @@ function Squares() {
         height: '50px',
         width: '50px',
         display: 'grid',
-        gridTemplateColumns: 'repeat(3, 50px)'
+        gridTemplateColumns: 'repeat(3, 50px)',
+        justifyContent: 'start'
       }}
     > {squares}</div>
   )
@@ -37,12 +40,14 @@ function App() {
     <div>
       <Squares />  
 
-      <p> Hello, world !</p>
-      
-      <button onClick={()=>setCount(count + 1)}>CLICK ME</button>
+      <div>
+        <p> Hello, world !</p>
+        
+        <button onClick={()=>setCount(count + 1)}>CLICK ME</button>
 
-      
-      <p> COUNT : {count} </p>
+        
+        <p> COUNT : {count} </p>
+      </div>
     </div>
   )
 }
